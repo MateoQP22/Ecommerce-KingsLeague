@@ -3,6 +3,7 @@ import PrimaryLayout from "../layouts/PrimaryLayout";
 import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/LoginPage";
 import NosotrosPage from "../pages/NosotrosPage";
+import ProductsPage from "../pages/ProductsPage";
 import RegisterPage from "../pages/RegisterPage";
 import AuthValidation from "./AuthValidation";
 
@@ -20,9 +21,13 @@ export const primaryRoutes = createBrowserRouter([
             element: <HomePage />
           },
           {
+            path: 'productos',
+            element: <ProductsPage />
+          },
+          {
             path: 'nosotros',
-            element: <NosotrosPage/>
-        }
+            element: <NosotrosPage />
+          }
         ]
       },
       {
