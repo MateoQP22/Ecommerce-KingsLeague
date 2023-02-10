@@ -1,9 +1,13 @@
-import React from 'react'
 
-const MainProductos = () => {
+const MainProductos = ({ title, children }) => {
   return (
-    <div>MainProductos</div>
-  )
-}
+    <section>
+      <div>
+        <h1>{title}</h1>
+        {children}
+      </div>
+    </section>
+  );
+};
 
-export default MainProductos
+export default MainProductos;
