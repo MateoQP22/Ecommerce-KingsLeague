@@ -25,7 +25,7 @@ export const primaryRoutes = createBrowserRouter([
             element: <ProductsPage />
           },
                     {
-            path: 'productos/:title',
+            path: 'productos/:id',
             element: <ProductsPage />
           },
           {

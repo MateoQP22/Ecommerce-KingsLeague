@@ -22,11 +22,11 @@ export const fetchReadProducts = createAsyncThunk (
 
 export const fetchReadProduct = createAsyncThunk (
   'home/fetchReadProduct',
-  async (slug, {rejectWithValue}) => {
+  async (id, {rejectWithValue}) => {
     try {
       const options = {
         method: 'GET',
-        url:`/products?filters[slug][$eq]=${slug}`
+        url:`/products?filters[id][$eq]=${id}`
 
       };
       const {data} = await axiosInstance(options);

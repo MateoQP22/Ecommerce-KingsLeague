@@ -29,14 +29,14 @@ export const productsSlice = createSlice ({
     builder.addCase(fetchReadProduct.pending, (state) => {
       state.loading = true;
     });
-    builder.addCase(fetchReadProduct.fulfilled, (state, action) => {
+    builder.addCase(fetchReadProduct.fulfilled, (state, {payload}) => {
       state.loading = false;
       state.error = {};
-      state.product = action.payload.data[0];
+      state.product = payload;
     });
-    builder.addCase(fetchReadProduct.rejected, (state, action) => {
+    builder.addCase(fetchReadProduct.rejected, (state, {payload}) => {
       state.loading = false;
-      state.error = action.payload;
+      state.error = payload;
       state.products = {};
     });
   }
