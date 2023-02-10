@@ -34,38 +34,43 @@ const LoginPage = () => {
 
   return (
     <>
-      <h1>LoginPage</h1>
-      <form
-        onSubmit={handleSubmitReadUser}
-      >
-        <input
-          type="email"
-          name="email"
-          placeholder="Correo"
-          value={email}
-          onChange={handleChangeLoginForm}
-        />
-        <br />
-        <br />
-        <input
-          type="password"
-          name="password"
-          placeholder="Contraseña"
-          value={password}
-          onChange={handleChangeLoginForm}
-        />
-        <br />
-        <br />
-        <input type="submit" value="Iniciar sesión" />
-      </form>
-      <br />
-      <Link to="/register">Crear cuenta</Link>
-      <br />
-      <br />
-      {loading && <span>Cargando...</span>}
-      <br />
-      <br />
-      {error && <span>{error.code}</span>}
+      <section className="login d-flex">
+        <div className="container d-flex f-direction-column a-items-center min-h-100vh">
+          <h1>LoginPage</h1>
+          <form
+            onSubmit={handleSubmitReadUser}
+          >
+            <input
+              type="email"
+              name="email"
+              placeholder="Correo"
+              value={email}
+              onChange={handleChangeLoginForm}
+            />
+            <br />
+            <br />
+            <input
+              type="password"
+              name="password"
+              placeholder="Contraseña"
+              value={password}
+              onChange={handleChangeLoginForm}
+            />
+            <br />
+            <br />
+            <input type="submit" value="Iniciar sesión" />
+          </form>
+          <br />
+          <Link to="/register">Crear cuenta</Link>
+          <br />
+          <br />
+          {loading && <span>Cargando...</span>}
+          <br />
+          <br />
+          {error && <span>{error.code}</span>}
+        </div>
+      </section>
+
     </>
   );
 };
