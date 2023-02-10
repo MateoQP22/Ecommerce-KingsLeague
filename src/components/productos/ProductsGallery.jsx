@@ -52,9 +52,13 @@ const ProductsGallery = () => {
     //console.log('filtra')
   }
  // console.log(results)
+ //results = datosFiltrados
   return (
     <>
       <div>
+        <br />
+        <br />
+        <br />
         <ul>
           <p>Buscar Producto:
             <input value={search} onChange={searcher} type="text" placeholder='Búsqueda' />
@@ -80,12 +84,12 @@ const ProductsGallery = () => {
 
               <>
                 <li key={element.id}>
-                  <Link to={`/products/${id}`} >
+                  <Link to={`/productos/${id}`} >
                   <h2> {title} </h2>
                   </Link>
-                  <h4>{category}</h4>
+                  {/* <h4>{category}</h4> */}
                   <img src={image} alt="" height="150px" />
-                  <p>descripción: {description} </p>
+                  {/* <p>descripción: {description} </p> */}
                   <h3>precio: {price} soles </h3>
                   <h5>Calificación: {rating.rate}, Cantidad: {rating.count} </h5>
                   <br />
