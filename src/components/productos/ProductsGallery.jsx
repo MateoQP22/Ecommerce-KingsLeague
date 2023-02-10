@@ -76,14 +76,14 @@ const ProductsGallery = () => {
         <ul className="borderprueba">
 
           {results.map((element) => {
-            const { id, slug, title, category, price, description, rating, image } = element;
+            const { id, title, category, price, description, rating, image } = element;
             // const {name, flags, cca2, capital} = element;
 
             return (
 
               <>
                 <li key={element.id}>
-                  <Link to={`/products/${slug}`} >
+                  <Link to={`/products/${id}`} >
                   <h2> {title} </h2>
                   </Link>
                   <h4>{category}</h4>
