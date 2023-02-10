@@ -1,18 +1,42 @@
-.hero {
-  position: relative;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  box-sizing: border-box;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: var(--light-primary-shadow-color);
-    pointer-events: none;
+.contenedor_hero{
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to right, rgb(0 0 0 / .7), rgb(0 0 0  / .7)), url(https://img.freepik.com/foto-gratis/concepto-armario-traje-estante-suspension-ropa_53876-65446.jpg?w=900&t=st=1675961913~exp=1675962513~hmac=f09f19289ffd8605abb377a9d1b397817b7355e5bf8e2742f6a9d0a9ff334d9e);
+  background-size: cover;
+  background-position: 50%  ;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text_hero{
+  color: white;
+  padding: 10rem 0;
+  width: 95%;
+  align-items: center;
+  justify-content: center;
+  
+}
+.title_hero{
+  font-weight: 700;
+  text-align: center;
+  font-size: 5rem;
+}
+@media (min-width: 768px) {
+  .title_hero{
+    text-align: left;
+  }
+}
+.descripcion_hero{
+  margin-top: 50px;
+  text-align: center;
+  
+}
+@media (min-width: 768px) {
+  .descripcion_hero{
+    text-align: left;
+    width: 50%;
   }
 }

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import HomeHero from "../components/home/HomeHero";
+import HomeMain from "../components/home/HomeMain";
 import useHome from "../hooks/useHome";
 import { fetchReadHomeData } from "../redux/thunks/homeThunk";
 
@@ -17,8 +18,9 @@ const HomePage = () => {
   return (
 
     <>
-    <h1>Hola</h1>
-    <HomeHero homedata={homedata} />
+    
+    <HomeHero/>
+    <HomeMain/>
     </>
   )
 }
