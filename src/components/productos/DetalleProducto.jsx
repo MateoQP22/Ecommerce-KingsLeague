@@ -7,25 +7,17 @@ const DetalleProducto = () => {
 
   return (
     <div>
-      {product.map((element) => {
-        const { id, title, category, price, description, rating, image } = element;
-        // const {name, flags, cca2, capital} = element;
-
-        return (
-          <>
-            <li key={element.id}>
-              <h2> {title} </h2>
-              <h4>{category}</h4>
-              <img src={image} alt="" height="150px" />
-              <p>descripción: {description} </p>
-              <h3>precio: {price} soles </h3>
-              <h5>Calificación: {rating.rate}, Cantidad: {rating.count} </h5>
-              <br />
-            </li>
-          </>
-        )
-      })}*/
-      <h1>Detalle</h1>
+      <>
+        <li key={product.id}>
+          <h2> {product.title} </h2>
+          <h4>{product.category}</h4>
+          <img src={product.image} alt="" height="150px" />
+          <p>descripción: {product.description} </p>
+          <h3>precio: {product.price} soles </h3>
+           {/* <h5>Calificación: {product.rating[1].product.rate}, Cantidad: {product.rating.count} </h5>  */}
+          <br />
+        </li>
+      </>
     </div>
   );
 };
