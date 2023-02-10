@@ -20,3 +20,19 @@ export const fetchReadProducts = createAsyncThunk (
   }
 );
 
+export const fetchReadProduct = createAsyncThunk (
+  'home/fetchReadProduct',
+  async (slug, {rejectWithValue}) => {
+    try {
+      const options = {
+        method: 'GET',
+        url:`/products?filters[slug][$eq]=${slug}`
+
+      };
+      const {data} = await axiosInstance(options);
+      return data ?? [];
+    } catch (error) {
+      return rejectWithValue(error);
+    }
+  }
+);

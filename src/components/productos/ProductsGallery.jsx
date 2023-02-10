@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import useProducts from "../../hooks/useProducts";
 
 const ProductsGallery = () => {
@@ -72,14 +73,16 @@ const ProductsGallery = () => {
           <br />
           <br />
           {results.map((element) => {
-            const { id, title, category, price, description, rating, image } = element;
+            const { id, slug, title, category, price, description, rating, image } = element;
             // const {name, flags, cca2, capital} = element;
 
             return (
 
               <>
                 <li key={element.id}>
+                  <Link to={`/products/${slug}`} >
                   <h2> {title} </h2>
+                  </Link>
                   <h4>{category}</h4>
                   <img src={image} alt="" height="150px" />
                   <p>descripción: {description} </p>
