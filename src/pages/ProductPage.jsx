@@ -6,10 +6,10 @@ import { fetchReadProduct } from "../redux/thunks/productsThunk";
 
 const ProductPage = () => {
   const dispatch = useDispatch();
-  const {slug} =useParams();
+  const {id} =useParams();
 
   useEffect(() => {
-    dispatch(fetchReadProduct(slug));
+    dispatch(fetchReadProduct(id));
   }, []);
   
   return (
