@@ -55,11 +55,9 @@ const ProductsGallery = () => {
  //results = datosFiltrados
   return (
     <>
-      <div>
-        <br />
-        <br />
-        <br />
-        <ul>
+      <div className="d-flex">
+      <div className="borderprueba">
+
           <p>Buscar Producto:
             <input value={search} onChange={searcher} type="text" placeholder='Búsqueda' />
           </p>
@@ -76,7 +74,11 @@ const ProductsGallery = () => {
           </div>
           <br />
           <br />
-        
+
+          </div>
+
+        <ul className="borderprueba">
+          
           {results.map((element) => {
 
             const { id, title, category, price, description, rating, image } = element;
@@ -85,8 +87,11 @@ const ProductsGallery = () => {
             return (
 
               <>
-                <li key={element.id}>
-                  <Link to={`/productos/${id}`} >
+
+              <div  className="borderprueba">
+              <li key={element.id}>
+                  <Link to={`/products/${id}`} >
+
                   <h2> {title} </h2>
                   </Link>
                   {/* <h4>{category}</h4> */}
@@ -96,6 +101,8 @@ const ProductsGallery = () => {
                   {/* <h5>Calificación: {rating.rate}, Cantidad: {rating.count} </h5> */}
                   <br />
                 </li>
+              </div>
+
               </>
             )
           })}
