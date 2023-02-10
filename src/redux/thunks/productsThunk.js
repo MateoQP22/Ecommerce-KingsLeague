@@ -27,7 +27,6 @@ export const fetchReadProduct = createAsyncThunk (
       const options = {
         method: 'GET',
         url:`/products?filters[id][$eq]=${id}`
-
       };
       const {data} = await axiosInstance(options);
       return data ?? [];
