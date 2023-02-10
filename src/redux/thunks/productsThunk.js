@@ -7,7 +7,7 @@ export const fetchReadProducts = createAsyncThunk (
     try {
       const options = {
         method: 'GET',
-        url:'/'
+        url:'/products'
 
       };
       const {data} = await axiosInstance(options);

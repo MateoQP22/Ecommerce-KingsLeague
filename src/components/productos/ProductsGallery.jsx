@@ -52,6 +52,7 @@ const ProductsGallery = () => {
     //console.log('filtra')
   }
  // console.log(results)
+ console.log(results)
   return (
     <>
       <div className="d-flex">
@@ -74,8 +75,9 @@ const ProductsGallery = () => {
           <br />
           </div>
         <ul className="borderprueba">
-
+        
           {results.map((element) => {
+
             const { id, title, category, price, description, rating, image } = element;
             // const {name, flags, cca2, capital} = element;
 
@@ -83,7 +85,7 @@ const ProductsGallery = () => {
 
               <>
                 <li key={element.id}>
-                  <Link to={`/products/${id}`} >
+                  <Link to={`/productos/${id}`} >
                   <h2> {title} </h2>
                   </Link>
                   <h4>{category}</h4>
