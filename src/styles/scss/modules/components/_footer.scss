@@ -1,5 +1,5 @@
 .footer {
-    background-image: linear-gradient(to right, rgb(0 0 0 / .7), rgb(0 0 0 / .7)), url(https://www.pcclean.io/wp-content/uploads/2020/4/e2yYZr.jpg);
+    background-image:linear-gradient(to right, rgb(0 0 0 / .7), rgb(0 0 0  / .7)), url(https://www.pcclean.io/wp-content/uploads/2020/4/e2yYZr.jpg);
     font-family: var(--font-family);
     background-size: cover;
     box-sizing: border-box;
@@ -7,8 +7,7 @@
     width: 100%;
     color: azure;
 }
-
-.article_conten {
+.article_conten{
     margin: 10px;
 }
 
@@ -21,12 +20,6 @@
     display: flex;
     flex-direction: column;
     margin: 0;
-}
-
-@media (max-width: 768px) {
-    .footer-container {
-        align-items: center;
-    }
 }
 
 .footer__information {
@@ -125,8 +118,8 @@
 
 .footer__form-boton:hover {
     box-shadow:
-        0 0 0.125rem 0.0625rem var(--footer-highlight-color),
-        0 0 0.25rem 0.125rem var(--footer-highlight-color);
+    0 0 0.125rem 0.0625rem var(--footer-highlight-color),
+    0 0 0.25rem 0.125rem var(--footer-highlight-color);
 }
 
 .footer__social-media-container {
