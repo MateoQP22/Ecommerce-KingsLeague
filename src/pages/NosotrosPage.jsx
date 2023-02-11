@@ -13,7 +13,10 @@ const NosotrosPage = () => {
         }
       }, [user]);
   return (
+    <>
     <MainNosotros/>
+    </>
+    
   )
 }
 
