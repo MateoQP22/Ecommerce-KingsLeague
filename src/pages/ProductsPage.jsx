@@ -31,9 +31,7 @@ const ProductsPage = () => {
   return (
 
     <>
-      <MainProductos
-        title="Galería de Productos"
-      >
+      <MainProductos>
 
         <ProductsGallery
           products={products}
