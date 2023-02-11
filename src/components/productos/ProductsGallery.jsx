@@ -1,14 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useProducts from "../../hooks/useProducts";
+import HomeContac from "../home/HomeContac";
+import HomeFooter from "../home/HomeFooter";
+import HomeHero from "../home/HomeHero";
 
-const ProductsGallery = ({ 
-  allProducts, 
-  setAllProducts, 
-  countProducts, 
-  setCountProducts, 
-  total, 
-  setTotal 
+const ProductsGallery = ({
+  allProducts,
+  setAllProducts,
+  countProducts,
+  setCountProducts,
+  total,
+  setTotal
 }) => {
   const { products } = useProducts();
   const [search, setSearch] = useState("");
@@ -82,59 +85,52 @@ const ProductsGallery = ({
   //datosFiltrados = results
   return (
     <>
-      <br />
-      <br />
-      <div className="d-flex">
-        <div className="borderprueba">
-          <br />
-          <br />
-          <br />
-          <p>Buscar Producto:
-            <input value={search} onChange={searcher} type="text" placeholder='Búsqueda' />
-          </p>
-          <p>Categorías:</p>
-          <div>
-            <input
-              onChange={handleOnCheckbox}
-              type="checkbox"
-              name="categorias"
-              value="men's clothing"
-              id="men's clothing"
-            />
-            <label htmlFor="men's clothing">Hombres</label>
-          </div>
-        </div>
+      <HomeHero />
+      <section className="section">
+        <div className="d-flex f-direction-column gap-lg">
+          <div className="container">
+            <form action="">
+              <div className="form__group">
+                
+                <input className="form__input" type="text" value={search} onChange={searcher} placeholder="Buscar Producto"/>
 
-        <ul className="borderprueba">
-          {results.map((product) => {
-            const { id, title, category, price, description, rating, image } = product;
-            // const {name, flags, cca2, capital} = element;
-            return (
-              <>
-                <div className="borderprueba">
-                  <li key={product.id}>
-                    <Link to={`/productos/${id}`} >
-                      <h2> {title} </h2>
-                    </Link>
+              </div>
+            </form>
+          </div>
+
+          <ul className="list g-elements g-elements--products-gallery gap-md">
+            {results.map((product) => {
+              const { id, title, category, price, description, rating, image } = product;
+              // const {name, flags, cca2, capital} = element;
+              return (
+                <>
+                  <li key={id} className="card card--products">
                     {/* <h4>{category}</h4> */}
-                    <img src={image} alt="" height="150px" />
-                    {/* <p>descripción: {description} </p> */}
-                    <h3>precio: {price} soles </h3>
-                    <h5>Calificación: {rating.rate}, Cantidad: {rating.count} </h5>
-                    <br />
-                    <button
-                      onClick={() => onAddProduct(product)}
-                    >
-                      Añadir al carrito
-                    </button>
-                    <br />
+                    <div className="t-align-center">
+                      <img src={image} alt="" height="150px" className="card__header-img card__header-img--products" />
+                    </div>
+                    <div className="card__body card__body--products">
+                      <Link to={`/productos/${id}`} >
+                        <h2 className="card__title card__title--sm"> {title} </h2>
+                      </Link>
+                      <h4 className="card__subtitle card__subtitle--sm">{category}</h4>
+                      <p className="card__text card__text--sm"><b>Descripcion</b> {description} </p>
+                      <h3 className="card__highlighted mt-auto">precio: {price} soles </h3>
+                      <h5 className="card__text card__text--sm">Calificación: {rating.rate}, Cantidad: {rating.count} </h5>
+                      <button className="button button--primary button--lg a-self-center">
+                        Realizar Pedido
+                      </button>
+
+                    </div>
                   </li>
-                </div>
-              </>
-            )
-          })}
-        </ul>
-      </div>
+                </>
+              )
+            })}
+          </ul>
+        </div>
+      </section>
+      <HomeContac />
+      <HomeFooter />
     </>
   );
 };

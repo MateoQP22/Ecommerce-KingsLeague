@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axiosInstance from "../../configs/axiosInstance";
 
 export const fetchReadProducts = createAsyncThunk (
-  'home/fetchReadProducts',
+  'products/fetchReadProducts',
   async (_, {rejectWithValue}) => {
     try {
       const options = {
@@ -21,12 +21,44 @@ export const fetchReadProducts = createAsyncThunk (
 );
 
 export const fetchReadProduct = createAsyncThunk (
-  'home/fetchReadProduct',
+  'products/fetchReadProduct',
   async (id, {rejectWithValue}) => {
     try {
       const options = {
         method: 'GET',
         url:`/products/${id}`
+      };
+      const {data} = await axiosInstance(options);
+      return data ?? [];
+    } catch (error) {
+      return rejectWithValue(error);
+    }
+  }
+);
+
+export const fetchReadCategoryMen = createAsyncThunk (
+  'products/fetchReadCategoryMen',
+  async (_, {rejectWithValue}) => {
+    try {
+      const options = {
+        method: 'GET',
+        url:`/products/category/men's clothing`
+      };
+      const {data} = await axiosInstance(options);
+      return data ?? [];
+    } catch (error) {
+      return rejectWithValue(error);
+    }
+  }
+);
+
+export const fetchReadCategoryWoman = createAsyncThunk (
+  'products/fetchReadCategoryWoman',
+  async (_, {rejectWithValue}) => {
+    try {
+      const options = {
+        method: 'GET',
+        url:`/products/category/women's clothing`
       };
       const {data} = await axiosInstance(options);
       return data ?? [];

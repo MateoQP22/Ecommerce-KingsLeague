@@ -1,11 +1,9 @@
+import React from 'react'
+import modelo from '../../assets/modelo3.png'
 
-// import 'bootstrap-icons/font/bootstrap-icons.css';
-// import ecommerce1 from '../../assets/ecommerce1.jpg';
-import modelo from '../../assets/modelo.png'
-import { Link } from 'react-router-dom';
-const HomeHero = () => {
+const ProductHeader = () => {
+    
   return (
-
     <>
       <section className='hero'>
         <div className='contenedor_hero'>
@@ -17,11 +15,7 @@ const HomeHero = () => {
               <h4>Todo en accesorios y ropa tanto para hombres como para mujeres,
                 navega por nuestra tienda online y encuentra los mejores productos y precios para ti</h4>
               <div className='boton_hero'>
-                <Link to="/Productos" className='link_hero'>Ver Productos</Link>
               </div>
-
-
-
             </div>
             <div className='img_hero'>
               <img src={modelo} alt="" />
@@ -32,6 +26,6 @@ const HomeHero = () => {
       </section>
     </>
   )
-};
+}
 
-export default HomeHero;
+export default ProductHeader

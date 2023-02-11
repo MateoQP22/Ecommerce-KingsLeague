@@ -1,5 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import PrimaryLayout from "../layouts/PrimaryLayout";
+import CategoryMenPage from "../pages/CategoryMenPage";
+import CategoryWomanPage from "../pages/CategoryWomanPage";
 import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/LoginPage";
 import NosotrosPage from "../pages/NosotrosPage";
@@ -32,6 +34,14 @@ export const primaryRoutes = createBrowserRouter([
           {
             path: 'nosotros',
             element: <NosotrosPage />
+          },
+          {
+            path: 'categoryMen',
+            element: <CategoryMenPage />
+          },
+          {
+            path: 'categoryWoman',
+            element: <CategoryWomanPage />
           }
         ]
       },
