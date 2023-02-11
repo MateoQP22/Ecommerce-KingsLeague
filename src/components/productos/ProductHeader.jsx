@@ -5,7 +5,7 @@ const ProductHeader = () => {
     
   return (
     <>
-      <section className='hero'>
+      <section className='section'>
         <div className='contenedor_hero'>
           <div className='text_hero'>
             <div className='title_hero'>
@@ -18,7 +18,7 @@ const ProductHeader = () => {
               </div>
             </div>
             <div className='img_hero'>
-              <img src={modelo} alt="" />
+              <img src={modelo} alt="" width={"650px"} height={"650px"} />
             </div>
           </div>
         </div>

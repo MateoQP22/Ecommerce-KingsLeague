@@ -7,7 +7,7 @@ const HomeHero = () => {
   return (
 
     <>
-      <section className='hero'>
+      <section className='section'>
         <div className='contenedor_hero'>
           <div className='text_hero'>
             <div className='title_hero'>

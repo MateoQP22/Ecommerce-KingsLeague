@@ -4,6 +4,7 @@ import useProducts from "../../hooks/useProducts";
 import HomeContac from "../home/HomeContac";
 import HomeFooter from "../home/HomeFooter";
 import HomeHero from "../home/HomeHero";
+import ProductHeader from "./ProductHeader";
 
 const ProductsGallery = ({
   allProducts,
@@ -85,7 +86,7 @@ const ProductsGallery = ({
   //datosFiltrados = results
   return (
     <>
-      <HomeHero />
+      <ProductHeader />
       <section className="section">
         <div className="d-flex f-direction-column gap-lg">
           <div className="container">
