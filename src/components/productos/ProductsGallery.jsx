@@ -92,8 +92,8 @@ const ProductsGallery = ({
           <div className="container">
             <form action="">
               <div className="form__group">
-                
-                <input className="form__input" type="text" value={search} onChange={searcher} placeholder="Buscar Producto"/>
+
+                <input className="form__input" type="text" value={search} onChange={searcher} placeholder="Buscar Producto" />
 
               </div>
             </form>
@@ -118,9 +118,11 @@ const ProductsGallery = ({
                       <p className="card__text card__text--sm"><b>Descripcion</b> {description} </p>
                       <h3 className="card__highlighted mt-auto">precio: {price} soles </h3>
                       <h5 className="card__text card__text--sm">Calificación: {rating.rate}, Cantidad: {rating.count} </h5>
-                      <button className="button button--primary button--lg a-self-center">
-                        Realizar Pedido
-                      </button>
+                      <a
+                        href={`https://api.whatsapp.com/send?phone=51999894566&text=Deseo pedir el producto ${title}, con el precio: ${price}`}
+                        target="_blank"
+                        className="button button--primary mt-auto"
+                      >Realizar Pedido</a>
 
                     </div>
                   </li>
