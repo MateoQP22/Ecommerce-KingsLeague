@@ -1,41 +1,90 @@
 .contenedor_hero{
   height: 100vh;
   width: 100%;
-  background-image: linear-gradient(to right, rgb(0 0 0 / .7), rgb(0 0 0  / .7)), url(https://img.freepik.com/foto-gratis/concepto-armario-traje-estante-suspension-ropa_53876-65446.jpg?w=900&t=st=1675961913~exp=1675962513~hmac=f09f19289ffd8605abb377a9d1b397817b7355e5bf8e2742f6a9d0a9ff334d9e);
+  background-image: linear-gradient(to right, rgb(0 0 0 / .7), rgb(0 0 0  / .7)), url(https://www.pcclean.io/wp-content/uploads/2020/4/e2yYZr.jpg);
   background-size: cover;
   background-position: 50%  ;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
+  position: relative;
 }
 
 .text_hero{
   color: white;
   padding: 10rem 0;
-  width: 95%;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  justify-content: space-between;
+  display: block;
   
 }
 .title_hero{
   font-weight: 700;
   text-align: center;
   font-size: 5rem;
+
 }
 @media (min-width: 768px) {
   .title_hero{
     text-align: left;
+    margin-left: 10px;
   }
 }
 .descripcion_hero{
   margin-top: 50px;
   text-align: center;
+  font-size: 1rem;
   
 }
 @media (min-width: 768px) {
   .descripcion_hero{
     text-align: left;
     width: 50%;
+    margin-left: 10px;
+    font-size: 2rem;
   }
+}
+.img_hero{
+  display: none;
+}
+@media (min-width: 992px) {
+  .img_hero{
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    animation-name: mostrarImagen;
+    animation-duration: 1s;
+
+  }
+}
+@keyframes mostrarImagen {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.boton_hero{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.link_hero{
+  text-decoration: none;
+  padding: 1rem 5rem;
+  color: white;
+  list-style: none;
+  border: 2px solid rgba(255, 153, 0, 0.952);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.4rem;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+.link_hero:hover{
+  background-color:rgba(255, 153, 0, 0.952) ;
+
 }

@@ -1,5 +1,7 @@
 // import { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import HomeContac from "../components/home/HomeContac";
+import HomeFooter from "../components/home/HomeFooter";
 import HomeHero from "../components/home/HomeHero";
 import HomeMain from "../components/home/HomeMain";
 // import useProducts from "../hooks/useProducts";
@@ -21,6 +23,8 @@ const HomePage = () => {
     <>
     <HomeHero/>
     <HomeMain/>
+    <HomeContac/>
+    <HomeFooter/>
     </>
   )
 }
