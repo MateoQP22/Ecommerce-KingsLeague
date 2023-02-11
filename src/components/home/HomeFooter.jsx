@@ -34,16 +34,16 @@ const HomeFooter = () => {
                         <nav className="footer__social-media-container">
                             <ul className="footer__link-list">
                                 <li className="footer__link-item">
-                                    <i class="bi bi-youtube"></i>
-                                </li>
-                                <li class="footer__link-item">
-                                    <i class="bi bi-facebook"></i>
+                                    <i className="bi bi-youtube"></i>
                                 </li>
                                 <li className="footer__link-item">
-                                    <i class="bi bi-whatsapp"></i>
+                                    <i className="bi bi-facebook"></i>
                                 </li>
                                 <li className="footer__link-item">
-                                    <i class="bi bi-instagram"></i>
+                                    <i className="bi bi-whatsapp"></i>
+                                </li>
+                                <li className="footer__link-item">
+                                    <i className="bi bi-instagram"></i>
                                 </li>
                             </ul>
                         </nav>

@@ -9,7 +9,7 @@ const ProductPage = () => {
   const {id} =useParams();
 
   useEffect(() => {
-    dispatch(fetchReadProduct(id));
+    dispatch(fetchReadProduct());
   }, []);
   
   return (
